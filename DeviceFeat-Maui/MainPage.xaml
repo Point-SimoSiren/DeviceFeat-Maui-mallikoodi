@@ -29,8 +29,22 @@
                 Spacing="25">
 
                 <Label Text="Muistio" />
-                
+
+                <Entry x:Name="inputKentta" FontSize="28" WidthRequest="300" Placeholder="Kirjoita tähän..." />
+
+                <Button x:Name="tallennusNappi" Clicked="tallennusNappi_Clicked" Margin="0, 30, 0, 0" Padding="40, 20, 40, 20" Text="Tallenna" />
+
+                <Label x:Name="outputLabel" FontSize="26" IsVisible="true" />
+
+                <!-- POISTO -->
+
+                <Button x:Name="poistoNappi" Text="Tyhjennä" StyleClass="btn" Clicked="poistoNappi_Clicked" />
+
+                <Label x:Name="vahvistusInfo" IsVisible="false" Text="Vahvista poistaminen liuttamalla oikealle" />
+                <Slider x:Name="vahvistusKytkin" IsVisible="false" ValueChanged="vahvistusKytkin_ValueChanged" />
+
             </VerticalStackLayout>
+            
         </ScrollView>
 
     </ContentPage>
