@@ -44,7 +44,28 @@
                 <Slider x:Name="vahvistusKytkin" IsVisible="false" ValueChanged="vahvistusKytkin_ValueChanged" />
 
             </VerticalStackLayout>
-            
+
+        </ScrollView>
+
+    </ContentPage>
+
+    
+    
+    <ContentPage Title="Ilmanpaine">
+        <ScrollView>
+            <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+                <Label Text="Ilmanpaine" FontSize="40" Margin="20, 20, 20, 20" />
+
+                <Label x:Name="BarometerLabel" FontSize="35" 
+                    Margin="20, 20, 20, 20" />
+
+                <Button x:Name="BarometerButton" Text="Mittaa paine" Clicked="BarometerButton_Clicked"
+                     Margin="20, 20, 20, 20" />
+
+            </VerticalStackLayout>
         </ScrollView>
 
     </ContentPage>

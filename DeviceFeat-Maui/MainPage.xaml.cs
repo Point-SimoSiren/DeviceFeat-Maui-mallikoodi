@@ -104,6 +104,49 @@
             valo_nappi_on.IsVisible = true;
         }
 
+
+        // ---x-------x--- BAROMETRI KOKEILU ----x-------x-----------x---
+
+        private void BarometerButton_Clicked(object sender, EventArgs e)
+        
+        {
+
+            if (Barometer.Default.IsSupported)
+            {
+                Barometer.Default.ReadingChanged += (s, e) =>
+                {
+                    // Haetaan ilmanpaine hPa-yksikössä
+                    double pressure = e.Reading.PressureInHectopascals;
+
+                    // Näytetään lukema Label-komponentissa
+                    MainThread.BeginInvokeOnMainThread(() =>
+                    {
+                        BarometerLabel.Text = $"Ilmanpaine: {pressure} hPa";
+                    });
+                };
+
+                // Käynnistetään barometrin lukeminen
+                try
+                {
+                    Barometer.Default.Start(SensorSpeed.UI);
+                }
+                catch (Exception ex)
+                {
+                    MainThread.BeginInvokeOnMainThread(() =>
+                    {
+                        BarometerLabel.Text = $"Virhe: {ex.Message}";
+                    });
+                }
+            }
+            else
+            {
+                BarometerLabel.Text = "Barometri ei ole tuettu tällä laitteella.";
+            }
+    }
+
+       
+
+        
     }
 
 }
