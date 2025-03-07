@@ -68,9 +68,9 @@
         {
             if (vahvistusKytkin.Value > 90)
             {
-                //Vibration.Vibrate();
                 vahvistusKytkin.Value = 0;
                 text = "";
+                File.WriteAllText(fileName, text);
                 outputLabel.Text = "";
                 vahvistusKytkin.IsVisible = false;
                 vahvistusInfo.IsVisible = false;
