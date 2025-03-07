@@ -28,11 +28,12 @@
                 Padding="30,0"
                 Spacing="25">
 
-                <Label Text="Muistio" />
+                <Label Text="Muistio" FontSize="35" />
 
                 <Entry x:Name="inputKentta" FontSize="28" WidthRequest="300" Placeholder="Kirjoita tähän..." />
 
-                <Button x:Name="tallennusNappi" Clicked="tallennusNappi_Clicked" Margin="0, 30, 0, 0" Padding="40, 20, 40, 20" Text="Tallenna" />
+                <Button x:Name="tallennusNappi" Clicked="tallennusNappi_Clicked" Margin="0, 30, 0, 0" 
+                        Padding="40, 20, 40, 20" Text="Tallenna" />
 
                 <Label x:Name="outputLabel" FontSize="26" IsVisible="true" />
 
