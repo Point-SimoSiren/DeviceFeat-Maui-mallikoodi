@@ -107,6 +107,8 @@
 
         // ---x-------x--- BAROMETRI KOKEILU ----x-------x-----------x---
 
+        // Katso myös lupa kuntoon: HIGH_SAMPLING_RATE_SENSORS
+
         private void BarometerButton_Clicked(object sender, EventArgs e)
         
         {
